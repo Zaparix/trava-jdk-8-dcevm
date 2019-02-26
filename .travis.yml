@@ -47,6 +47,7 @@ script:
         --build-variant dcevm --hswap-agent-download-url \"${HSWAP_AGENT_DOWNLOAD_URL}\" --target-file-name java8-openjdk-dcevm-${TRAVIS_OS_NAME}.tar.gz jdk8u"; 
     fi
   - if [[ $OS_BUILD == "windows" ]]; then 
+      echo "Starting windows build... #3246236"
       powershell -Command "C:\tools\cygwin\bin\bash.exe -c './build_windows.sh'"; 
     fi
 deploy:
